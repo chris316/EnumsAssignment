@@ -10,7 +10,7 @@ public class DuongXinyuEnumTest {
     @Test
     public void testDuongName() {
         // Given
-        Duong duong = DuongXinyuEnum.Duong;
+        DuongXinyuEnum Duong = DuongXinyuEnum.Duong;
         String expected = "Duong";
 
         // When
@@ -18,6 +18,19 @@ public class DuongXinyuEnumTest {
 
         // Then
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDuongName1()
+    {
+        //Given
+        String expected="Test";
+
+        //When
+        String actual=DuongXinyuEnum.Duong.name();
+
+        //Then
+        Assert.assertNotEquals(expected,actual);
     }
 
 
@@ -32,6 +45,19 @@ public class DuongXinyuEnumTest {
 
         // Then
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testXinyuName1()
+    {
+        //Given
+        String expected="Chris";
+
+        //When
+        String actual=DuongXinyuEnum.Xinyu.name();
+
+        //Then
+        Assert.assertNotEquals(expected,actual);
     }
 
 
@@ -49,6 +75,19 @@ public class DuongXinyuEnumTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testDuongCatchPhrase1()
+    {
+        //Given
+        String expected="Hello!";
+
+        //When
+        String actual=DuongXinyuEnum.Duong.getCatchPhrase();
+
+        //Then
+        Assert.assertNotEquals(expected,actual);
+    }
+
 
     @Test
     public void testXinyuCatchPhrase() {
@@ -61,6 +100,19 @@ public class DuongXinyuEnumTest {
 
         // Then
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testXinyuCatchPhrase1()
+    {
+        //Given
+        String expected="This is Xinyu's CatchPhrase!";
+
+        //when
+        String actual=DuongXinyuEnum.Xinyu.getCatchPhrase();
+
+        //Then
+        Assert.assertNotEquals(expected,actual);
     }
 
     @Test
@@ -100,6 +152,7 @@ public class DuongXinyuEnumTest {
         // Then
         Assert.assertTrue(outcome);
     }
+
 
     @Test
     public void testXinyuIsDuong() {

@@ -7,9 +7,9 @@ import org.junit.Test;
  */
 public class DuongXinyuEvaluatorTest {
     @Test
-    public void testyang() {
+    public void testChris() {
         // Given
-        String input = "yang";
+        String input = "chris";
         DuongXinyuEvaluator abc = new DuongXinyuEvaluator(input);
 
         // When
@@ -22,9 +22,9 @@ public class DuongXinyuEvaluatorTest {
     }
 
     @Test
-    public void testWilhem() {
+    public void testDan() {
         // Given
-        String input = "Tariq";
+        String input = "dan";
         DuongXinyuEvaluator abc = new DuongXinyuEvaluator(input);
 
         // When
@@ -51,6 +51,22 @@ public class DuongXinyuEvaluatorTest {
         Assert.assertTrue(isXinyu);
     }
 
+    @Test
+    public void testXinyu1()
+    {
+        //given
+        String input="Xinyu";
+        DuongXinyuEvaluator abc=new DuongXinyuEvaluator(input);
+
+        //When
+        boolean isDuong=abc.isDuong();
+        boolean isXinyu=abc.isXinyu();
+
+        //Then
+        Assert.assertFalse(isDuong);
+        Assert.assertTrue(isXinyu);
+    }
+
 
     @Test
     public void testDuong() {
@@ -63,6 +79,22 @@ public class DuongXinyuEvaluatorTest {
         boolean isXinyu = abc.isXinyu();
 
         // Then
+        Assert.assertTrue(isDuong);
+        Assert.assertFalse(isXinyu);
+    }
+
+    @Test
+    public void testDuong1()
+    {
+        //given
+        String input="duong";
+        DuongXinyuEvaluator abc=new DuongXinyuEvaluator(input);
+
+        //when
+        boolean isDuong=abc.isDuong();
+        boolean isXinyu=abc.isXinyu();
+
+        //Then
         Assert.assertTrue(isDuong);
         Assert.assertFalse(isXinyu);
     }
